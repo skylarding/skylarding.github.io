@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chenyi (Skylar) Ding</title>
+  <meta name="description" content="Chenyi (Skylar) Ding is an MA student in Linguistics at UC Davis working on computational psycholinguistics, language acquisition, and second-language sentence processing." />
+  <meta name="author" content="Chenyi (Skylar) Ding" />
+  <meta property="og:title" content="Chenyi (Skylar) Ding" />
+  <meta property="og:description" content="MA student in Linguistics at UC Davis. Computational psycholinguistics, language acquisition, L2 sentence processing." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://skylarding.github.io/" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7' fill='%233b5a82'/%3E%3C/svg%3E" />
+
+  <style>
+    :root {
+      --ink: #1f1f1f;
+      --muted: #5f5f5f;
+      --faint: #8a8a8a;
+      --line: #e3e3e3;
+      --link: #2b5797;
+      --maxw: 760px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: #fff;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+
+    header.site { padding: 36px 0 18px; border-bottom: 1px solid var(--line); }
+    header.site h1 { font-size: 26px; font-weight: 600; margin: 0 0 4px; letter-spacing: -0.01em; }
+    header.site .tagline { color: var(--muted); margin: 0 0 14px; font-size: 16px; }
+    nav a { margin-right: 18px; font-size: 16px; }
+    nav a:last-child { margin-right: 0; }
+
+    section { padding: 34px 0 6px; }
+    section h2 { font-size: 20px; font-weight: 600; margin: 0 0 14px; }
+    section h3 { font-size: 16px; font-weight: 600; margin: 22px 0 8px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+    p { margin: 0 0 14px; }
+
+    .about { display: flex; gap: 28px; align-items: flex-start; }
+    .about img { width: 170px; height: auto; flex: none; border: 1px solid var(--line); }
+    .about .text { flex: 1; min-width: 0; }
+
+    .entry { margin: 0 0 14px; }
+    .entry .title { margin: 0; }
+    .entry .meta { margin: 0; color: var(--muted); font-size: 15.5px; }
+    .me { font-weight: 600; }
+    .links a { margin-left: 4px; font-size: 14.5px; }
+    .links a::before { content: "["; color: var(--faint); }
+    .links a::after { content: "]"; color: var(--faint); }
+
+    ul.plain { list-style: none; padding: 0; margin: 0; }
+    ul.plain li { margin: 0 0 10px; }
+    ul.news li { padding-left: 0; }
+    ul.news b { font-weight: 600; white-space: nowrap; }
+
+    .project { margin: 0 0 18px; }
+    .project .name { font-weight: 600; margin: 0; }
+    .project .with { color: var(--muted); font-size: 15px; margin: 0 0 4px; }
+    .project p { margin: 0; }
+
+    footer { padding: 30px 0 48px; margin-top: 30px; border-top: 1px solid var(--line); color: var(--faint); font-size: 14px; }
+    footer a { color: var(--muted); }
+
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .about { flex-direction: column; }
+      .about img { width: 140px; }
+      nav a { margin-right: 12px; font-size: 15px; }
+    }
+  </style>
+</head>
+
+<body>
+<div class="wrap">
+
+  <header class="site">
+    <h1>Chenyi (Skylar) Ding</h1>
+    <p class="tagline">MA student in Linguistics, University of California, Davis<br />
+      Computational psycholinguistics · Language acquisition · L2 sentence processing</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#teaching">Teaching</a>
+      <a href="files/Chenyi_Ding_CV.pdf">CV</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <div class="about">
+      <img src="assets/img/portrait.jpg" alt="Watercolor self-portrait of Chenyi (Skylar) Ding" />
+      <div class="text">
+        <p>Hi, I'm Skylar. I am a second-year MA student in Linguistics at UC Davis, advised by
+          <a href="https://emilymorgan.github.io/">Emily Morgan</a>. I work in computational psycholinguistics.
+          I use language models as models of linguistic input and of human expectation, and I test their
+          predictions against how children learn words and how adults read in a first and a second language.</p>
+        <p>Two questions run through my current projects. First, how much of the order in which children learn
+          words can be read off the structure of the input alone? With
+          <a href="https://jasbi.github.io/">Masoud Jasbi</a> and Zachary Houghton, I relate the semantic
+          geometry of child-scale language models (BabyLM) to age-of-acquisition norms. Second, do second-language
+          readers weight syntactic and semantic cues differently from native readers? With Emily Morgan, I decompose
+          GPT-2 surprisal into syntactic and semantic parts and relate each to eye-movement data from L1 and L2 readers.
+          Earlier, for my BA thesis with Hong Liu, I ran a visual-world eye-tracking study on prediction in
+          Chinese–English bilinguals.</p>
+        <p>I am applying to PhD programs for Fall 2027. Before Davis, I did my BA in English Studies at
+          Xi'an Jiaotong-Liverpool University. Outside research I paint in watercolor and ink; the portrait here is mine.</p>
+        <p>Email: cyiding [at] ucdavis [dot] edu ·
+          <a href="https://github.com/skylarding">GitHub</a> ·
+          <a href="files/Chenyi_Ding_CV.pdf">CV (PDF)</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="news">
+    <h2>News</h2>
+    <ul class="plain news">
+      <li><b>Oct 2026</b> &nbsp;Talk with Emily Morgan on decomposing language model surprisal in L1 and L2 reading accepted at LSA 2027 (San Francisco, Jan 2027).</li>
+      <li><b>Sep 2026</b> &nbsp;Paper on age of acquisition in BabyLM representations accepted at the BabyLM Workshop, EMNLP 2026 (Budapest). A poster on the same project accepted at BUCLD 51 (Boston, Nov 2026).</li>
+      <li><b>Jul 2026</b> &nbsp;Presented work on semantic entropy as a reliability diagnostic for LLM-based content analysis at IC²S² 2026 (Burlington, VT).</li>
+    </ul>
+  </section>
+
+  <section id="research">
+    <h2>Research</h2>
+
+    <div class="project">
+      <p class="name">Age of acquisition in child-scale language models</p>
+      <p class="with">with Masoud Jasbi and Zachary Houghton, UC Davis · 2026–present</p>
+      <p>Does the order in which children learn words reflect the semantic structure of what they hear? I treat language models trained on child-scale corpora as models of the input, extract contextual embeddings over CHILDES utterances from 18 checkpoints across three architectures (OPT, GPT-2, RoBERTa) and data scales from 10M to 180B words, and use measures of semantic-neighborhood structure (cohesion, distinctiveness, diversity) to predict Wordbank age-of-acquisition norms alongside the classic predictors. I also built a corpus-based age-of-acquisition measure from children's first productions in CHILDES.</p>
+    </div>
+
+    <div class="project">
+      <p class="name">Cue-weighted surprisal in L1 and L2 reading</p>
+      <p class="with">with Emily Morgan, UC Davis · 2026–present</p>
+      <p>A test of the Shallow Structure Hypothesis with language model surprisal. I decompose GPT-2 surprisal into a syntactic component (probability mass over words sharing a part of speech) and a semantic component via the chain rule, with word frequency as a separate predictor, and model first-pass reading times from the Multilingual Eye-movement Corpus (45 L1 and 497 L2 readers from 12 language backgrounds) with mixed-effects models, including per-L1-background comparisons.</p>
+    </div>
+
+    <div class="project">
+      <p class="name">Pragmatic vulnerability in LLM-based content analysis</p>
+      <p class="with">with Seth Frey, Shiyi Chen, Ziyu Zhao and Miner Ye, Department of Communication, UC Davis · 2026–present</p>
+      <p>Which variables in a content-analysis codebook are hard for a language model to extract, and why? We draw on common ground theory, Gricean pragmatics and register analysis to classify variables as pragmatically vulnerable or routine, and adapt semantic entropy (sampled extractions clustered by bidirectional entailment) as a variable-level reliability diagnostic over 55 peer-reviewed articles and 57 variables.</p>
+    </div>
+
+    <div class="project">
+      <p class="name">Proficiency and cognitive efficiency in L2 predictive sentence processing</p>
+      <p class="with">with Hong Liu, XJTLU · BA thesis, 2024–2025</p>
+      <p>A visual-world eye-tracking experiment (Tobii Pro Spectrum, 1200 Hz) with 143 Chinese–English bilinguals, adding a flanker task to measure cognitive processing efficiency. Fixation-based and saccade-based measures of anticipation were analyzed with mixed-effects models. The manuscript is under review at <i>Second Language Research</i>.</p>
+    </div>
+  </section>
+
+  <section id="publications">
+    <h2>Publications and presentations</h2>
+
+    <h3>Papers</h3>
+    <div class="entry">
+      <p class="title"><span class="me">Ding, C.</span>, Houghton, Z. N., &amp; Jasbi, M. (2026). Reading acquisition order out of BabyLM representations: Child-scale training produces developmentally aligned semantic spaces. <i>Proceedings of the BabyLM Workshop at EMNLP 2026</i>, Budapest, Hungary. Forthcoming.</p>
+    </div>
+    <div class="entry">
+      <p class="title"><span class="me">Ding, C.</span>, &amp; Liu, H. The joint influence of proficiency and cognitive processing efficiency on L2 predictive sentence processing. Under review at <i>Second Language Research</i>.</p>
+    </div>
+
+    <h3>Talks and posters</h3>
+    <div class="entry">
+      <p class="title"><span class="me">Ding, C.</span>, &amp; Morgan, E. (2027, January). Decomposing language model surprisal reveals differential cue weighting in L1 and L2 reading. Talk at the <i>Annual Meeting of the Linguistic Society of America (LSA 2027)</i>, San Francisco, CA.</p>
+    </div>
+    <div class="entry">
+      <p class="title"><span class="me">Ding, C.</span>, Houghton, Z. N., &amp; Jasbi, M. (2026, November). Children's word-learning order is already in their input: Age of acquisition in the semantic space of a child-scale language model. Poster at the <i>51st Boston University Conference on Language Development (BUCLD 51)</i>, Boston, MA.</p>
+    </div>
+    <div class="entry">
+      <p class="title"><span class="me">Ding, C.</span>, Chen, S., Zhao, Z., Ye, M., &amp; Frey, S. (2026, July). Measuring pragmatic difficulty in LLM-based content analysis: Semantic entropy as a diagnostic for variable-level reliability. Talk at the <i>12th International Conference on Computational Social Science (IC²S²)</i>, Burlington, VT.</p>
+    </div>
+    <div class="entry">
+      <p class="title"><span class="me">Ding, C.</span>, Chen, S., Zhao, Z., Ye, M., &amp; Frey, S. (2026, May). Why here and not there? A pragmatic account of selective failures in LLM-based construct extraction. Talk at <i>Communication Horizons @ UC Davis 2026</i>, Davis, CA.</p>
+    </div>
+    <div class="entry">
+      <p class="title"><span class="me">Ding, C.</span>, Chen, S., Zhao, Z., Ye, M., &amp; Frey, S. (2026, May). Pragmatic vulnerability in academic discourse: Using semantic entropy to predict where LLMs fail. Talk at the <i>12th Annual UC Davis Symposium on Language Research (CLR)</i>, Davis, CA.</p>
+    </div>
+
+    <h3>Other</h3>
+    <div class="entry">
+      <p class="meta">Contribution acknowledged in Liu, Sperlich, &amp; Yao (2026), <i>Linguistic Approaches to Bilingualism</i>, <a href="https://doi.org/10.1075/lab.26019.liu">doi:10.1075/lab.26019.liu</a>, for stimulus design and data collection as a research assistant.</p>
+    </div>
+  </section>
+
+  <section id="teaching">
+    <h2>Teaching</h2>
+    <p>Teaching assistant, Department of Linguistics, UC Davis:</p>
+    <ul class="plain">
+      <li>Computational Linguistics (Fall 2026)</li>
+      <li>English Grammar (Spring 2026)</li>
+      <li>Introduction to Linguistics (Fall 2025, Winter 2026)</li>
+    </ul>
+    <h3>Service</h3>
+    <p>Reviewer for the BabyLM Workshop 2026 (EMNLP), the International Conference on Computational Social Science (IC²S²), and the UC Davis Symposium on Language Research (CLR). Member of the Linguistic Society of America.</p>
+  </section>
+
+  <section id="cv">
+    <h2>CV</h2>
+    <p>My CV is <a href="files/Chenyi_Ding_CV.pdf">here</a> (PDF).</p>
+  </section>
+
+  <footer>
+    Chenyi (Skylar) Ding · cyiding [at] ucdavis [dot] edu · Last updated October 2026
+  </footer>
+
+</div>
+</body>
+</html>
