@@ -13,9 +13,6 @@
   <meta property="og:image" content="https://skylarding.github.io/assets/img/portrait.jpg" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%230e5563'/%3E%3C/svg%3E" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
 
   <style>
     :root {
@@ -29,7 +26,7 @@
       --body: #2f3a3f;
       --muted: #66767c;
       --line: #dbe5e7;
-      --serif: "EB Garamond", Garamond, Georgia, "Times New Roman", serif;
+      --serif: Georgia, "Times New Roman", serif;
       --sans: var(--serif);
       --w: 900px;
     }
@@ -37,7 +34,7 @@
     html { scroll-behavior: smooth; }
     body {
       margin: 0; background: #fff; color: var(--body);
-      font-family: var(--serif); font-size: 20px; line-height: 1.6; font-variant-numeric: oldstyle-nums;
+      font-family: var(--serif); font-size: 18px; line-height: 1.65;
       -webkit-font-smoothing: antialiased;
     }
     a { color: var(--teal-500); text-decoration: none; border-bottom: 1px solid var(--teal-300); }
@@ -47,65 +44,63 @@
     /* ---------- header ---------- */
     .top { border-bottom: 1px solid var(--line); background: #fff; position: sticky; top: 0; z-index: 10; }
     .top .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 20px; }
-    .brand { font-weight: 500; font-size: 23px; color: var(--teal-900); border: none; }
+    .brand { font-size: 18px; color: var(--teal-900); border: none; }
     .top nav { display: flex; gap: 26px; }
-    .top nav a { color: var(--body); font-variant: small-caps; letter-spacing: 0.06em; font-size: 18px; border: none; padding: 4px 0; border-bottom: 1px solid transparent; }
+    .top nav a { color: var(--body); font-size: 18px; border: none; padding: 4px 0; border-bottom: 1px solid transparent; }
     .top nav a:hover { color: var(--teal-700); border-bottom-color: var(--teal-500); }
 
     /* ---------- intro ---------- */
     .intro { display: grid; grid-template-columns: 220px 1fr; gap: 44px; align-items: start; padding: 64px 0 56px; }
     .intro img { width: 220px; height: 220px; object-fit: cover; object-position: 65% 35%; border-radius: 10px; border: 1px solid var(--line); box-shadow: 0 10px 28px rgba(14,85,99,0.14); }
-    .intro h1 { font-weight: 500; font-size: 46px; line-height: 1.1; color: var(--teal-900); margin: 0 0 10px; letter-spacing: -0.01em; }
-    .intro .role { color: var(--muted); font-style: italic; font-size: 20px; margin: 0 0 20px; }
-    .intro .lede { font-size: 23.5px; line-height: 1.5; color: var(--ink); margin: 0 0 18px; }
+    .intro h1 { font-weight: normal; font-size: 32px; line-height: 1.1; color: var(--teal-900); margin: 0 0 10px; letter-spacing: -0.01em; }
+    .intro .role { color: var(--muted); margin: 0 0 20px; }
+    .intro .lede { margin: 0 0 16px; }
     .intro p { margin: 0 0 16px; }
-    .meta { display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: 19px; margin-top: 6px; }
-    .meta a { font-weight: 500; }
+    .meta { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 6px; }
 
     /* ---------- sections ---------- */
     section { padding: 48px 0 8px; }
     section + section { border-top: 1px solid var(--line); }
-    h2 { font-weight: 500; font-size: 32px; color: var(--teal-900); margin: 0 0 24px; letter-spacing: -0.01em; }
-    h3 { font-size: 19px; font-weight: 500; font-variant: small-caps; letter-spacing: 0.08em; color: var(--teal-700); margin: 32px 0 10px; }
+    h2 { font-weight: normal; font-size: 26px; color: var(--teal-900); margin: 0 0 24px; letter-spacing: -0.01em; }
+    h3 { font-size: 18px; font-weight: bold; color: var(--teal-700); margin: 30px 0 10px; }
     h3:first-of-type { margin-top: 0; }
     p { margin: 0 0 16px; }
 
     /* news */
     .news { list-style: none; margin: 0; padding: 0 0 0 22px; border-left: 3px solid var(--teal-300); }
     .news li { display: grid; grid-template-columns: 96px 1fr; gap: 18px; padding: 8px 0; }
-    .news time { color: var(--teal-700); font-style: italic; font-size: 19px; }
+    .news time { color: var(--teal-700); }
 
     /* publications */
     .pub { display: grid; grid-template-columns: 64px 1fr; gap: 16px; padding: 9px 0; }
     .pub .yr { color: var(--muted); }
     .pub p { margin: 0; }
-    .pub .t { display: block; font-weight: 500; color: var(--ink); line-height: 1.35; margin-bottom: 2px; }
-    .pub .m { color: var(--muted); font-size: 18.5px; }
-    .me { font-weight: 500; color: var(--ink); }
-    .badge { font-style: italic; font-weight: 400; color: var(--teal-700); margin-left: 6px; }
+    .pub .t { display: block; color: var(--ink); margin-bottom: 2px; }
+    .pub .m { color: var(--muted); }
+    .me { color: var(--ink); }
+    .badge { color: var(--teal-700); margin-left: 6px; }
     .badge::before { content: "("; }
     .badge::after { content: ")"; }
 
     /* teaching */
     .courses { list-style: none; margin: 0; padding: 0; }
     .courses li { display: grid; grid-template-columns: 92px 1fr auto; gap: 16px; padding: 5px 0; align-items: baseline; }
-    .courses .code { font-weight: 500; color: var(--teal-700); }
-    .courses .term { color: var(--muted); font-style: italic; }
+    .courses .code { color: var(--teal-700); }
+    .courses .term { color: var(--muted); }
 
     /* cv */
     .cv p { margin: 0; }
 
-    footer { margin-top: 56px; border-top: 1px solid var(--line); padding: 24px 0 44px; color: var(--muted); font-size: 17px; font-style: italic; }
+    footer { margin-top: 56px; border-top: 1px solid var(--line); padding: 24px 0 44px; color: var(--muted); font-size: 16px; }
 
     @media (max-width: 720px) {
-      body { font-size: 19px; }
+      body { font-size: 17px; }
       .wrap { padding: 0 20px; }
       .top .wrap { height: auto; padding: 12px 20px; flex-direction: column; align-items: flex-start; gap: 8px; }
       .top nav { gap: 18px; flex-wrap: wrap; }
       .intro { grid-template-columns: 1fr; gap: 24px; padding: 40px 0 36px; }
       .intro img { width: 160px; height: 160px; }
-      .intro h1 { font-size: 34px; }
-      .intro .lede { font-size: 21px; }
+      .intro h1 { font-size: 28px; }
       .news { padding-left: 14px; }
       .news li, .pub { grid-template-columns: 1fr; gap: 2px; }
       .courses li { grid-template-columns: 1fr; gap: 0; }
@@ -135,9 +130,9 @@
     <div>
       <h1>Chenyi (Skylar) Ding</h1>
       <p class="role">MA student in Linguistics, University of California, Davis</p>
-      <p class="lede">I work in computational psycholinguistics. I use language models as models of linguistic input and of human expectation, and test their predictions against how adults read in a first and a second language and how children learn words.</p>
-      <p>I am a second-year MA student advised by <a href="https://morganlab.ucdavis.edu/">Emily Morgan</a>. Two questions run through my current projects. First, do second-language readers weight syntactic and semantic cues differently from native readers? With Emily Morgan, I decompose GPT-2 surprisal into syntactic and semantic parts and relate each to eye-movement data from L1 and L2 readers. Second, how much of the order in which children learn words can be read off the structure of the input alone? With <a href="https://jasbi.github.io/">Masoud Jasbi</a> and Zachary Houghton, I relate the semantic geometry of child-scale language models (BabyLM) to age-of-acquisition norms. Earlier, for my BA thesis with Hong Liu, I ran a visual-world eye-tracking study on prediction in Chinese–English bilinguals.</p>
-      <p>I am applying to PhD programs for Fall 2027. Before Davis, I did my BA in English Studies at Xi'an Jiaotong-Liverpool University.</p>
+      <p>I am a second-year MA student in Linguistics at UC Davis, where I work with <a href="https://morganlab.ucdavis.edu/">Emily Morgan</a> on computational psycholinguistics. Most of my work uses language models as a stand-in for the statistics of linguistic experience and asks how far those statistics go in explaining what people do.</p>
+      <p>With Emily Morgan, I am studying whether second-language readers rely on syntactic and semantic cues in the same way native readers do. We split GPT-2 surprisal into a syntactic part and a semantic part and test which one better predicts eye-movement data from L1 and L2 readers. With <a href="https://jasbi.github.io/">Masoud Jasbi</a> and Zachary Houghton, I am asking how much of the order in which children learn words can be predicted from the semantic structure of child-directed speech, using language models trained on child-scale corpora as a proxy for that input. For my BA thesis with Hong Liu, I ran a visual-world eye-tracking experiment on prediction in Chinese–English bilinguals.</p>
+      <p>I did my BA in English Studies at Xi'an Jiaotong-Liverpool University and will be applying to PhD programs for Fall 2027.</p>
       <div class="meta">
         <a href="mailto:cyiding@ucdavis.edu">cyiding@ucdavis.edu</a>
         <a href="https://github.com/skylarding">GitHub</a>
