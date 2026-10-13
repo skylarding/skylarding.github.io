@@ -10,188 +10,145 @@
   <meta property="og:description" content="MA student in Linguistics at UC Davis. Computational psycholinguistics, language acquisition, L2 sentence processing." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://skylarding.github.io/" />
-  <meta property="og:image" content="https://skylarding.github.io/assets/img/headshot.jpg" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%231b3a9e'/%3E%3Ccircle cx='8' cy='8' r='3' fill='%23ff6a3d'/%3E%3C/svg%3E" />
+  <meta property="og:image" content="https://skylarding.github.io/assets/img/portrait.jpg" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%230e5563'/%3E%3C/svg%3E" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
 
   <style>
     :root {
-      --blue: #1b3a9e;
-      --blue-bright: #2f5df0;
-      --blue-tint: #edf1ff;
-      --accent: #ff6a3d;
-      --accent-soft: #fff0ea;
-      --ink: #101828;
-      --body: #344054;
-      --muted: #667085;
-      --line: #e4e7ec;
-      --serif: "Fraunces", Georgia, "Times New Roman", serif;
-      --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      --w: 1080px;
+      --teal-900: #0b3d47;
+      --teal-700: #0e5563;
+      --teal-500: #177a86;
+      --teal-300: #8ec5cb;
+      --teal-100: #e4f1f2;
+      --teal-50:  #f3f8f8;
+      --ink: #1c2327;
+      --body: #2f3a3f;
+      --muted: #66767c;
+      --line: #dbe5e7;
+      --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+      --sans: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      --w: 900px;
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
       margin: 0; background: #fff; color: var(--body);
-      font-family: var(--sans); font-size: 18px; line-height: 1.8;
+      font-family: var(--sans); font-size: 18.5px; line-height: 1.7;
       -webkit-font-smoothing: antialiased;
+      border-top: 6px solid var(--teal-700);
     }
-    a { color: var(--blue-bright); text-decoration: none; }
-    a:hover { text-decoration: underline; text-underline-offset: 3px; }
-    .wrap { max-width: var(--w); margin: 0 auto; padding: 0 40px; }
+    a { color: var(--teal-500); text-decoration: none; border-bottom: 1px solid var(--teal-300); }
+    a:hover { color: var(--teal-900); border-bottom-color: var(--teal-900); }
+    .wrap { max-width: var(--w); margin: 0 auto; padding: 0 28px; }
 
-    /* ---------- hero ---------- */
-    .hero {
-      background: linear-gradient(120deg, #15307f 0%, var(--blue) 45%, var(--blue-bright) 100%);
-      color: #fff; padding: 88px 0 64px; position: relative; overflow: hidden;
-    }
-    .hero::after {
-      content: ""; position: absolute; right: -140px; top: -140px; width: 520px; height: 520px;
-      border-radius: 50%; background: radial-gradient(circle, rgba(255,106,61,0.55) 0%, rgba(255,106,61,0) 70%);
-    }
-    .hero .wrap { display: flex; align-items: center; gap: 56px; position: relative; z-index: 1; }
-    .hero img {
-      width: 220px; height: 220px; border-radius: 50%; object-fit: cover; flex: none;
-      border: 6px solid rgba(255,255,255,0.95); box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-    }
-    .hero h1 { font-family: var(--serif); font-weight: 500; font-size: 60px; line-height: 1.05; letter-spacing: -0.015em; margin: 0 0 14px; }
-    .hero .role { font-size: 20px; color: rgba(255,255,255,0.85); margin: 0 0 8px; }
-    .hero .fields { font-size: 16px; color: rgba(255,255,255,0.7); margin: 0 0 30px; }
-    .hero .links { display: flex; flex-wrap: wrap; gap: 10px; }
-    .hero .links a {
-      color: #fff; border: 1.5px solid rgba(255,255,255,0.5); border-radius: 999px;
-      padding: 8px 18px; font-weight: 600; font-size: 15px; transition: background .15s, border-color .15s;
-    }
-    .hero .links a:hover { background: var(--accent); border-color: var(--accent); text-decoration: none; }
-    .hero .links a.primary { background: #fff; color: var(--blue); border-color: #fff; }
-    .hero .links a.primary:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+    /* ---------- header ---------- */
+    .top { border-bottom: 1px solid var(--line); background: #fff; position: sticky; top: 0; z-index: 10; }
+    .top .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 20px; }
+    .brand { font-family: var(--serif); font-weight: 600; font-size: 21px; color: var(--teal-900); border: none; }
+    .top nav { display: flex; gap: 26px; }
+    .top nav a { color: var(--body); font-weight: 600; font-size: 16px; border: none; padding: 4px 0; border-bottom: 2px solid transparent; }
+    .top nav a:hover { color: var(--teal-700); border-bottom-color: var(--teal-500); }
 
-    /* ---------- nav ---------- */
-    .nav { background: #fff; border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 10; }
-    .nav .wrap { display: flex; gap: 34px; overflow-x: auto; }
-    .nav a { color: var(--ink); font-weight: 600; font-size: 15.5px; padding: 18px 0 15px; border-bottom: 3px solid transparent; white-space: nowrap; }
-    .nav a:hover { color: var(--blue-bright); border-bottom-color: var(--accent); text-decoration: none; }
+    /* ---------- intro ---------- */
+    .intro { display: grid; grid-template-columns: 220px 1fr; gap: 44px; align-items: start; padding: 64px 0 56px; }
+    .intro img { width: 220px; height: 220px; object-fit: cover; object-position: 65% 35%; border-radius: 10px; border: 1px solid var(--line); box-shadow: 0 10px 28px rgba(14,85,99,0.14); }
+    .intro h1 { font-family: var(--serif); font-weight: 600; font-size: 42px; line-height: 1.1; color: var(--teal-900); margin: 0 0 10px; letter-spacing: -0.01em; }
+    .intro .role { color: var(--muted); font-size: 18px; margin: 0 0 20px; }
+    .intro .lede { font-family: var(--serif); font-size: 21.5px; line-height: 1.55; color: var(--ink); margin: 0 0 18px; }
+    .intro p { margin: 0 0 16px; }
+    .meta { display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: 16.5px; margin-top: 6px; }
+    .meta a { font-weight: 600; }
 
     /* ---------- sections ---------- */
-    section { padding: 80px 0 0; }
-    section:last-of-type { padding-bottom: 100px; }
-    h2 {
-      font-family: var(--serif); font-weight: 500; font-size: 40px; line-height: 1.1; color: var(--ink);
-      margin: 0 0 32px; letter-spacing: -0.015em; display: flex; align-items: center; gap: 18px;
-    }
-    h2::before { content: ""; width: 14px; height: 14px; border-radius: 50%; background: var(--accent); flex: none; }
-    h3 { font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--blue-bright); margin: 44px 0 16px; }
+    section { padding: 48px 0 8px; }
+    section + section { border-top: 1px solid var(--line); }
+    h2 { font-family: var(--serif); font-weight: 600; font-size: 30px; color: var(--teal-900); margin: 0 0 24px; letter-spacing: -0.01em; }
+    h2::after { content: ""; display: block; width: 40px; height: 3px; background: var(--teal-500); margin-top: 10px; border-radius: 2px; }
+    h3 { font-size: 13.5px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal-700); margin: 32px 0 12px; }
     h3:first-of-type { margin-top: 0; }
-    p { margin: 0 0 20px; }
-    .lede { font-family: var(--serif); font-size: 27px; line-height: 1.5; color: var(--ink); margin: 0 0 28px; max-width: 960px; }
-    .lede strong { font-weight: 600; color: var(--blue); }
-    .prose { max-width: 900px; }
-    .tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
-    .tag { background: var(--blue-tint); color: var(--blue); font-size: 14px; font-weight: 600; padding: 7px 15px; border-radius: 999px; }
+    p { margin: 0 0 16px; }
 
     /* news */
-    .news { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
-    .news li {
-      display: grid; grid-template-columns: 120px 1fr; gap: 24px; align-items: start;
-      background: #f8f9fc; border-radius: 14px; padding: 22px 26px;
-    }
-    .news time { color: var(--accent); font-weight: 700; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; padding-top: 5px; }
+    .news { list-style: none; margin: 0; padding: 0; background: var(--teal-50); border-radius: 12px; padding: 8px 26px; }
+    .news li { display: grid; grid-template-columns: 92px 1fr; gap: 18px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+    .news li:last-child { border-bottom: none; }
+    .news time { color: var(--teal-700); font-weight: 700; font-size: 15px; padding-top: 2px; }
 
     /* publications */
-    .pub { display: grid; grid-template-columns: 60px 1fr; gap: 18px; padding: 20px 0; border-bottom: 1px solid var(--line); }
-    .pub:last-child { border-bottom: none; }
-    .pub .yr { font-family: var(--serif); font-size: 19px; color: var(--muted); padding-top: 3px; }
+    .pub { display: grid; grid-template-columns: 64px 1fr; gap: 16px; padding: 14px 0; border-bottom: 1px dashed var(--line); }
+    .pub:last-of-type { border-bottom: none; }
+    .pub .yr { font-family: var(--serif); color: var(--muted); font-size: 17px; padding-top: 2px; }
     .pub p { margin: 0; }
-    .pub .t { font-weight: 600; color: var(--ink); display: block; margin-bottom: 4px; font-size: 19px; line-height: 1.45; }
-    .pub .m { color: var(--muted); font-size: 16px; }
+    .pub .t { display: block; font-weight: 600; color: var(--ink); line-height: 1.4; margin-bottom: 3px; }
+    .pub .m { color: var(--muted); font-size: 16.5px; }
     .me { font-weight: 700; color: var(--ink); }
-    .badge { display: inline-block; font-size: 12.5px; font-weight: 700; letter-spacing: 0.03em; color: var(--accent); background: var(--accent-soft); padding: 2px 10px; border-radius: 6px; margin-left: 8px; vertical-align: 2px; }
-    .badge.blue { color: var(--blue-bright); background: var(--blue-tint); }
+    .badge { display: inline-block; font-size: 12.5px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--teal-700); background: var(--teal-100); padding: 2px 9px; border-radius: 4px; margin-left: 8px; vertical-align: 2px; }
 
     /* teaching */
-    .courses { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
-    .courses li { border: 1.5px solid var(--line); border-radius: 14px; padding: 18px 22px; }
-    .courses .code { display: block; font-weight: 700; color: var(--blue-bright); font-size: 14px; letter-spacing: 0.06em; margin-bottom: 4px; }
-    .courses .name { display: block; font-weight: 600; color: var(--ink); font-size: 18px; line-height: 1.4; }
-    .courses .term { display: block; color: var(--muted); font-size: 15px; margin-top: 4px; }
+    .courses { list-style: none; margin: 0; padding: 0; }
+    .courses li { display: grid; grid-template-columns: 92px 1fr auto; gap: 16px; padding: 10px 0; border-bottom: 1px dashed var(--line); align-items: baseline; }
+    .courses li:last-child { border-bottom: none; }
+    .courses .code { font-weight: 700; color: var(--teal-700); }
+    .courses .term { color: var(--muted); font-size: 16px; }
 
     /* cv */
-    .cv-box {
-      background: linear-gradient(120deg, var(--blue) 0%, var(--blue-bright) 100%); color: #fff;
-      border-radius: 20px; padding: 40px 44px; display: flex; align-items: center; justify-content: space-between; gap: 30px; flex-wrap: wrap;
-    }
-    .cv-box p { margin: 0; font-size: 20px; max-width: 620px; }
-    .btn { display: inline-block; background: #fff; color: var(--blue); border-radius: 999px; padding: 14px 28px; font-weight: 700; font-size: 16px; }
-    .btn:hover { background: var(--accent); color: #fff; text-decoration: none; }
+    .cv { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; background: var(--teal-100); border-radius: 12px; padding: 26px 30px; }
+    .cv p { margin: 0; color: var(--teal-900); }
+    .btn { display: inline-block; background: var(--teal-700); color: #fff; border: none; border-radius: 8px; padding: 11px 22px; font-weight: 700; font-size: 16px; }
+    .btn:hover { background: var(--teal-900); color: #fff; }
 
-    footer { border-top: 1px solid var(--line); padding: 28px 0 44px; color: var(--muted); font-size: 15px; }
+    footer { margin-top: 56px; border-top: 1px solid var(--line); padding: 24px 0 44px; color: var(--muted); font-size: 15.5px; }
 
-    @media (max-width: 760px) {
-      body { font-size: 17px; }
-      .wrap { padding: 0 22px; }
-      .hero { padding: 56px 0 44px; }
-      .hero .wrap { flex-direction: column; align-items: flex-start; gap: 28px; }
-      .hero img { width: 150px; height: 150px; }
-      .hero h1 { font-size: 42px; }
-      .hero .role { font-size: 18px; }
-      .nav .wrap { gap: 22px; }
-      section { padding-top: 56px; }
-      h2 { font-size: 32px; }
-      .lede { font-size: 22px; }
-      .news li { grid-template-columns: 1fr; gap: 4px; padding: 18px 20px; }
-      .pub { grid-template-columns: 1fr; gap: 2px; }
-      .pub .yr { font-size: 15px; }
-      .cv-box { padding: 28px 24px; }
+    @media (max-width: 720px) {
+      body { font-size: 17.5px; }
+      .wrap { padding: 0 20px; }
+      .top .wrap { height: auto; padding: 12px 20px; flex-direction: column; align-items: flex-start; gap: 8px; }
+      .top nav { gap: 18px; flex-wrap: wrap; }
+      .intro { grid-template-columns: 1fr; gap: 24px; padding: 40px 0 36px; }
+      .intro img { width: 160px; height: 160px; }
+      .intro h1 { font-size: 34px; }
+      .intro .lede { font-size: 19.5px; }
+      .news { padding: 4px 18px; }
+      .news li, .pub { grid-template-columns: 1fr; gap: 2px; }
+      .courses li { grid-template-columns: 1fr; gap: 0; }
     }
   </style>
 </head>
 
 <body>
 
-<header class="hero">
+<header class="top">
   <div class="wrap">
-    <img src="assets/img/headshot.jpg" alt="Chenyi (Skylar) Ding" />
-    <div>
-      <h1>Chenyi (Skylar) Ding</h1>
-      <p class="role">MA student in Linguistics, University of California, Davis</p>
-      <p class="fields">Computational psycholinguistics · Language acquisition · L2 sentence processing</p>
-      <div class="links">
-        <a class="primary" href="files/Chenyi_Ding_CV.pdf">Download CV</a>
-        <a href="mailto:cyiding@ucdavis.edu">cyiding@ucdavis.edu</a>
-        <a href="https://github.com/skylarding">GitHub</a>
-      </div>
-    </div>
+    <a class="brand" href="#">Chenyi (Skylar) Ding</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#news">News</a>
+      <a href="#publications">Publications</a>
+      <a href="#teaching">Teaching</a>
+      <a href="files/Chenyi_Ding_CV.pdf">CV</a>
+    </nav>
   </div>
 </header>
 
-<nav class="nav">
-  <div class="wrap">
-    <a href="#about">About</a>
-    <a href="#news">News</a>
-    <a href="#publications">Publications</a>
-    <a href="#teaching">Teaching</a>
-    <a href="#cv">CV</a>
-  </div>
-</nav>
-
 <main class="wrap">
 
-  <section id="about">
-    <h2>About</h2>
-    <p class="lede">Hi, I'm Skylar. I work in <strong>computational psycholinguistics</strong>: I use language models as models of linguistic input and of human expectation, and test their predictions against how adults read in a first and a second language and how children learn words.</p>
-    <div class="prose">
-      <p>I am a second-year MA student in Linguistics at UC Davis, advised by <a href="https://morganlab.ucdavis.edu/">Emily Morgan</a>. Two questions run through my current projects. First, do second-language readers weight syntactic and semantic cues differently from native readers? With Emily Morgan, I decompose GPT-2 surprisal into syntactic and semantic parts and relate each to eye-movement data from L1 and L2 readers. Second, how much of the order in which children learn words can be read off the structure of the input alone? With <a href="https://jasbi.github.io/">Masoud Jasbi</a> and Zachary Houghton, I relate the semantic geometry of child-scale language models (BabyLM) to age-of-acquisition norms. Earlier, for my BA thesis with Hong Liu, I ran a visual-world eye-tracking study on prediction in Chinese–English bilinguals.</p>
+  <section id="about" class="intro">
+    <img src="assets/img/portrait.jpg" alt="Watercolor self-portrait of Chenyi (Skylar) Ding" />
+    <div>
+      <h1>Chenyi (Skylar) Ding</h1>
+      <p class="role">MA student in Linguistics, University of California, Davis</p>
+      <p class="lede">I work in computational psycholinguistics. I use language models as models of linguistic input and of human expectation, and test their predictions against how adults read in a first and a second language and how children learn words.</p>
+      <p>I am a second-year MA student advised by <a href="https://morganlab.ucdavis.edu/">Emily Morgan</a>. Two questions run through my current projects. First, do second-language readers weight syntactic and semantic cues differently from native readers? With Emily Morgan, I decompose GPT-2 surprisal into syntactic and semantic parts and relate each to eye-movement data from L1 and L2 readers. Second, how much of the order in which children learn words can be read off the structure of the input alone? With <a href="https://jasbi.github.io/">Masoud Jasbi</a> and Zachary Houghton, I relate the semantic geometry of child-scale language models (BabyLM) to age-of-acquisition norms. Earlier, for my BA thesis with Hong Liu, I ran a visual-world eye-tracking study on prediction in Chinese–English bilinguals.</p>
       <p>I am applying to PhD programs for Fall 2027. Before Davis, I did my BA in English Studies at Xi'an Jiaotong-Liverpool University.</p>
-    </div>
-    <div class="tags">
-      <span class="tag">Computational psycholinguistics</span>
-      <span class="tag">Surprisal theory</span>
-      <span class="tag">L2 sentence processing</span>
-      <span class="tag">Word learning</span>
-      <span class="tag">Language acquisition</span>
+      <div class="meta">
+        <a href="mailto:cyiding@ucdavis.edu">cyiding@ucdavis.edu</a>
+        <a href="https://github.com/skylarding">GitHub</a>
+        <a href="files/Chenyi_Ding_CV.pdf">CV (PDF)</a>
+      </div>
     </div>
   </section>
 
@@ -209,7 +166,7 @@
 
     <h3>Papers</h3>
     <div class="pub"><span class="yr">2026</span><p><span class="t">Reading acquisition order out of BabyLM representations: Child-scale training produces developmentally aligned semantic spaces<span class="badge">Forthcoming</span></span><span class="m"><span class="me">Ding, C.</span>, Houghton, Z. N., &amp; Jasbi, M. <i>Proceedings of the BabyLM Workshop at EMNLP 2026</i>, Budapest, Hungary.</span></p></div>
-    <div class="pub"><span class="yr"></span><p><span class="t">The joint influence of proficiency and cognitive processing efficiency on L2 predictive sentence processing<span class="badge blue">Under review</span></span><span class="m"><span class="me">Ding, C.</span>, &amp; Liu, H. <i>Second Language Research</i>.</span></p></div>
+    <div class="pub"><span class="yr"></span><p><span class="t">The joint influence of proficiency and cognitive processing efficiency on L2 predictive sentence processing<span class="badge">Under review</span></span><span class="m"><span class="me">Ding, C.</span>, &amp; Liu, H. <i>Second Language Research</i>.</span></p></div>
 
     <h3>Working papers</h3>
     <div class="pub"><span class="yr"></span><p><span class="t">Why here and not there? A pragmatic account of selective errors in LLM-based construct extraction</span><span class="m"><span class="me">Ding, C.</span>, Chen, S., Zhao, Z., Ye, M., &amp; Frey, S.</span></p></div>
@@ -227,21 +184,21 @@
     <h2>Teaching</h2>
     <h3>Teaching assistant, Department of Linguistics, UC Davis</h3>
     <ul class="courses">
-      <li><span class="code">LIN 177</span><span class="name">Computational Linguistics</span><span class="term">Fall 2026</span></li>
-      <li><span class="code">LIN 106</span><span class="name">English Grammar</span><span class="term">Spring 2026</span></li>
-      <li><span class="code">LIN 1Y</span><span class="name">Introduction to Linguistics</span><span class="term">Winter 2026, Spring 2026</span></li>
-      <li><span class="code">LIN 1</span><span class="name">Introduction to Linguistics</span><span class="term">Fall 2025</span></li>
+      <li><span class="code">LIN 177</span><span>Computational Linguistics</span><span class="term">Fall 2026</span></li>
+      <li><span class="code">LIN 106</span><span>English Grammar</span><span class="term">Spring 2026</span></li>
+      <li><span class="code">LIN 1Y</span><span>Introduction to Linguistics</span><span class="term">Winter 2026, Spring 2026</span></li>
+      <li><span class="code">LIN 1</span><span>Introduction to Linguistics</span><span class="term">Fall 2025</span></li>
     </ul>
     <h3>Grader</h3>
     <ul class="courses">
-      <li><span class="code">LIN 105</span><span class="name">Topics in Sign Language Linguistics</span><span class="term">Fall 2026</span></li>
+      <li><span class="code">LIN 105</span><span>Topics in Sign Language Linguistics</span><span class="term">Fall 2026</span></li>
     </ul>
   </section>
 
   <section id="cv">
     <h2>CV</h2>
-    <div class="cv-box">
-      <p>Education, publications, research and teaching experience, skills, and service, in one PDF.</p>
+    <div class="cv">
+      <p>Education, publications, research and teaching experience, skills, and service.</p>
       <a class="btn" href="files/Chenyi_Ding_CV.pdf">Download CV (PDF)</a>
     </div>
   </section>
@@ -249,7 +206,7 @@
 </main>
 
 <footer>
-  <div class="wrap">Chenyi (Skylar) Ding · <a href="mailto:cyiding@ucdavis.edu">cyiding@ucdavis.edu</a> · Last updated October 2026</div>
+  <div class="wrap">Chenyi (Skylar) Ding · <a href="mailto:cyiding@ucdavis.edu">cyiding@ucdavis.edu</a> · Portrait in watercolor and ink by the author · Last updated October 2026</div>
 </footer>
 
 </body>
